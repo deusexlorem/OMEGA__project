@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer'
+import { Routes, Route} from 'react-router-dom';
+import Main from './components/pages/Main';
+import Explore from './components/pages/Explore';
+import Create from './components/pages/Create';
+import ConnectWallet from './components/pages/ConnectWallet';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+      <Header/>
+      <Routes>
+        <Route 
+          path = '/' 
+          element = {<Main/>}
+        />
+        <Route 
+          path = '/explore' 
+          element = {<Explore/>}
+        />
+        <Route 
+          path = '/create' 
+          element = {<Create/>}
+        />
+        <Route 
+          path = '/connectWallet' 
+          element = {<ConnectWallet/>}
+        />
+      </Routes>
+      <Footer/>
+   </div>
+  )
 }
 
 export default App;

@@ -1,0 +1,191 @@
+.header__container{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(2, 0, 92, 0.811);
+    backdrop-filter: blur(10px);
+}
+#omega-logo{
+    width: 60px;
+}
+.logo{
+    fill: rgb(243, 55, 55);
+    color:#f33737;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo:hover{
+    cursor: pointer;
+    fill: #9c2222;
+    color: #9c2222;
+    transition: .3s;
+}
+.logo:active{
+    fill: #6c1616;
+    color: #6c1616;
+    transition: .3s;
+}
+.logo p{
+    font-size: 50px;
+    font-weight: 100;
+    font-family: 'Train One', cursive;
+    margin: 0;
+}
+
+#mobile-logo{
+    display: none;
+}
+.header{
+
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: appear .5s ease-in-out;
+}
+@keyframes appear {
+    0%    {opacity: 0;}
+    100% {opacity: 1;}
+}
+.wallet{
+    display: flex;
+    gap: 30px
+}
+#wallet{
+    fill: rgb(243, 55, 55);
+    max-width: 40px;
+}
+.navigation ul{
+    font-size: 16px;
+    font-weight: 300;
+    color:#ffffffb9;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+.navigation ul li:hover{
+    color:#ffffff;
+    cursor: pointer;
+    transition: .3s;
+}
+.navigation ul li{
+    list-style-type: none;
+}
+.header{
+    display: flex;
+    align-items: center;
+}
+#wallet-btn{
+    font-size: 16px;
+    font-weight: 300;
+    width: 180px;
+    min-height: 50px;
+    border: none;
+    background-color: #f33737;
+    color:rgb(2, 0, 92);
+    border-radius: 20px;
+}
+#wallet-btn:hover{
+    cursor: pointer;
+    background-color: #9c2222;
+    transition: .3s;
+}
+#wallet-btn:active{
+    background-color: #6c1616;
+    transition: .3s;
+}
+#wallet:hover{
+    cursor: pointer;
+    fill: #9c2222;
+    transition: .3s;
+}
+#wallet:active{
+    fill: #6c1616;
+    transition: .3s;
+}
+.mobile-navigation{
+    display: none;
+}
+.mobile-trigger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobile-content{
+    display: none;  
+    justify-content: flex-end;
+    animation: sweep .2s ease-in-out;
+}
+@keyframes sweep {
+    0%    {opacity: 0;}
+    100%  {opacity: 1;}
+}
+.mobile-content ul{ 
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: 300;
+    color:#ffffffb9;
+}
+.mobile-content ul li{
+    padding: 10px;
+}
+.mobile-content ul li:hover{
+    color:#ffffff;
+    cursor: pointer;
+    transition: .3s;
+}
+.side-menu{    
+    min-width: 15%;
+    position: absolute;  
+    background: rgba(3, 1, 72, 0.732);
+    backdrop-filter: blur(10px);
+    border-radius: 20px 0px 0px 20px;
+    padding: 20px;
+}
+@media all and (max-width: 768px) {
+    .mobile-content{
+        display: flex;
+    }
+    .mobile-navigation{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .navigation{
+        display: none;
+    }
+    .wallet{
+        display: none;
+    }
+    #burger{
+        fill: rgb(243, 55, 55);
+        width: 40px;
+    }
+    #burger:hover{
+        cursor: pointer;
+        fill: #9c2222;
+        transition: .3s;
+    }
+    #burger:active{
+        fill: #6c1616;
+        transition: .3s;
+    }
+}
+@media all and (max-width: 400px) {
+    .logo p{
+        display: none;
+        
+    }
+    #mobile-logo{
+        display:block;
+        opacity: 0;
+        font-size: 50px;
+        font-weight: 100;
+        font-family: 'Train One', cursive;
+        margin: 0;
+    }
+}
