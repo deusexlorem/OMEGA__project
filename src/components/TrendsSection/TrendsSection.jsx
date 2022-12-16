@@ -6,6 +6,8 @@ import Slider from "react-slick";
 import axios from "axios";
 import { useState, useEffect} from "react";
 import SectionItem from "../SectionItem/SectionItem";
+import NextArrow from "../../icons/nextArrow";
+import PrevArrow from "../../icons/prevArrow";
 
 
 const TrendsSection = ( ) => {
@@ -31,6 +33,8 @@ const TrendsSection = ( ) => {
         speed: 600,
         slidesToShow: 5,
         slidesToScroll: 1,
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>
       };
       
     return (

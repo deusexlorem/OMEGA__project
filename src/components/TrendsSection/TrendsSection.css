@@ -19,5 +19,11 @@
     font-weight: 600;
     transition: .2s;
 }
-
-
+.slick-arrow{
+    fill: #ffffff7a;
+    transition: all 0.3s ease-in-out;
+}
+.slick-arrow:hover{
+    fill: #ffffffb8;
+    
+}

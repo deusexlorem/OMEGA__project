@@ -2,7 +2,6 @@
     position: sticky;
     top: 0px;
     z-index: 1;
-    
     animation: appear .5s ease-in-out;
 }
 @keyframes appear {

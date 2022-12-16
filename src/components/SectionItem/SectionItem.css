@@ -6,7 +6,7 @@
     transition: all .3s;
 }
 .section__item img{
-    z-index: 9;
+    /* z-index: 9; */
     width: 100%;
     border-radius: 16px
 }
