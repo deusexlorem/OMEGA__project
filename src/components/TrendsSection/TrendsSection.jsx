@@ -1,14 +1,14 @@
 import React from "react";
-import './DailyOffer.css';
+import './TrendsSection.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import axios from "axios";
 import { useState, useEffect} from "react";
-import TrendingSliderItem from "../TrendingSilderItem/TrendingSliderItem";
+import SectionItem from "../SectionItem/SectionItem";
 
 
-const DailyOffer = ( ) => {
+const TrendsSection = ( ) => {
 
     const [trends, setTrends ] = useState([]);
     
@@ -38,20 +38,16 @@ const DailyOffer = ( ) => {
         <div className="daily-offer">
             <h1>Сейчас в тренде</h1>
             <Slider {...settings}>
-
                 {trends.map((trend ) => 
-                
-                    <TrendingSliderItem
+                    <SectionItem
                         poster_path = {trend.poster_path}
                         key = {trend.id}
-                    />
-
+                    /> 
                 )}
-                
             </Slider>
         </div>
 
     )
 }
 
-export default DailyOffer;
+export default TrendsSection;

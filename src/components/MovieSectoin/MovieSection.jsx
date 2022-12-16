@@ -2,7 +2,7 @@ import React from "react";
 import './MovieSection.css';
 import { useState, useEffect} from "react";
 import axios from "axios";
-import StaticItem from "../StaticItem/StatisItem";
+import SectionItem from "../SectionItem/SectionItem";
 
 const MovieSection = () => {
     
@@ -31,7 +31,7 @@ const MovieSection = () => {
             <div className="movie_section__content">
                 {moviesShort.map((movie) => 
                     
-                    <StaticItem
+                    <SectionItem
                         poster_path = {movie.poster_path}
                         key = {movie.id}
                     />

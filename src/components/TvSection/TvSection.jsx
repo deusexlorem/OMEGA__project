@@ -2,7 +2,7 @@ import React from "react";
 import './TvSection.css';
 import { useState, useEffect} from "react";
 import axios from "axios";
-import StaticItem from "../StaticItem/StatisItem";
+import SectionItem from "../SectionItem/SectionItem";
 
 const TvSection = () => {
     
@@ -31,7 +31,7 @@ const TvSection = () => {
             <div className="tv_section__content">
                 {tvShort.map((show) => 
                     
-                    <StaticItem
+                    <SectionItem
                         poster_path = {show.poster_path}
                         key = {show.id}
                     />

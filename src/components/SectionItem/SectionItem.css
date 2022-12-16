@@ -1,0 +1,15 @@
+.section__item{
+    max-width: 100%;
+    border-radius: 16px;
+    cursor: pointer;
+    margin: 5px 10px;
+    transition: all .3s;
+}
+.section__item img{
+    z-index: 9;
+    width: 100%;
+    border-radius: 16px
+}
+.section__item:hover{
+    transform: scale(1.02);
+}

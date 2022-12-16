@@ -1,14 +1,14 @@
 import React from "react";
-import './StaticItem.css'
+import './SectionItem.css'
 
 
-const StaticItem = (props) =>{
+const SectionItem = (props) =>{
     // console.log(props)
 
     return (
-        <div className="static_item">
+        <div className="section__item">
             <img src={props.poster_path} alt="" />
         </div>
     )
 }
-export default StaticItem;
+export default SectionItem;
