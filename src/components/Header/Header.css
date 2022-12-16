@@ -33,7 +33,7 @@
     margin: 0;
 }
 
-#mobile-logo{
+#mobile__logo{
     display: none;
 }
 .header{
@@ -50,7 +50,7 @@
 }
 .wallet{
     display: flex;
-    gap: 30px
+    gap: 10px
 }
 #wallet{
     fill: rgb(243, 55, 55);
@@ -76,7 +76,7 @@
     display: flex;
     align-items: center;
 }
-#wallet-btn{
+#wallet__button{
     font-size: 16px;
     font-weight: 300;
     width: 180px;
@@ -86,22 +86,14 @@
     color:rgb(2, 0, 92);
     border-radius: 20px;
 }
-#wallet-btn:hover{
+#enter__button{
+    color:#ffffffb9;
+    font-size: 16px;
+    font-weight: 300;
+}
+#enter__button:hover{
+    color:#ffffff;
     cursor: pointer;
-    background-color: #9c2222;
-    transition: .3s;
-}
-#wallet-btn:active{
-    background-color: #6c1616;
-    transition: .3s;
-}
-#wallet:hover{
-    cursor: pointer;
-    fill: #9c2222;
-    transition: .3s;
-}
-#wallet:active{
-    fill: #6c1616;
     transition: .3s;
 }
 .mobile-navigation{
@@ -188,4 +180,4 @@
         font-family: 'Train One', cursive;
         margin: 0;
     }
-}
+} 

@@ -1,6 +1,5 @@
 import React from "react";
 import {useState} from "react";
-import Wallet from "../../icons/wallet";
 import BurgerMenu from "../../icons/burgerMenu";
 import Logo from "../../icons/logo";
 import './Header.css'
@@ -25,17 +24,18 @@ const Header = () => {
             <div className="logo" onClick = {() => navigate('/')}>
                 <Logo/>
                 <p>OMEGA</p>
-                <p id = 'mobile-logo'>O</p>
+                <p id = 'mobile__logo'>O</p>
             </div>
             <div className="navigation">
                 <ul>
-                    <li onClick = {() => navigate('/explore')}>Explore</li>
-                    <li onClick = {() => navigate('/create')}>Create</li>
+                    <li onClick = {() => navigate('/explore')}>Тренды</li>
+                    <li onClick = {() => navigate('/create')}>Фильмы</li>
+                    <li >Сериалы</li>
                 </ul>
             </div>
             <div className="wallet">
-                <button id = "wallet-btn" onClick = {() => navigate('/connectWallet')}>Connect wallet</button>
-                <Wallet/>
+                <button id = "wallet__button" onClick = {() => navigate('/connectWallet')}>Зарегистрироваться</button>
+                <p id = "enter__button">Войти</p>
             </div>
             <div className="mobile-navigation">
                 <div className="mobile-trigger" onClick = {() => setOpen(!open)}>
