@@ -39,7 +39,7 @@ const Header = () => {
             </div>
             <div className="mobile-navigation">
                 <div className="mobile-trigger" onClick = {() => setOpen(!open)}>
-                    <BurgerMenu/>
+                    <BurgerMenu/> 
                 </div>
             </div>
         </div>

@@ -1,9 +1,13 @@
 .header__container{
     position: sticky;
-    top: 0;
+    top: 0px;
     z-index: 1;
-    background-color: rgba(2, 0, 92, 0.811);
-    backdrop-filter: blur(10px);
+    
+    animation: appear .5s ease-in-out;
+}
+@keyframes appear {
+    0%    {opacity: 0;}
+    100% {opacity: 1;}
 }
 #omega-logo{
     width: 60px;
@@ -37,16 +41,12 @@
     display: none;
 }
 .header{
-
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: appear .5s ease-in-out;
-}
-@keyframes appear {
-    0%    {opacity: 0;}
-    100% {opacity: 1;}
+    background-color: rgba(2, 0, 92, 0.811);
+    backdrop-filter: blur(10px);
 }
 .wallet{
     display: flex;
@@ -85,6 +85,16 @@
     background-color: #f33737;
     color:rgb(2, 0, 92);
     border-radius: 20px;
+    box-shadow: 0px 0px 10px #f337379f;
+}
+#wallet__button:hover{
+    cursor: pointer;
+    background-color: #9c2222;
+    transition: .3s;
+}
+#wallet__button:active{
+    background-color: #3b0c0c;
+    transition: .3s;
 }
 #enter__button{
     color:#ffffffb9;
@@ -106,41 +116,28 @@
 }
 .mobile-content{
     display: none;  
-    justify-content: flex-end;
-    animation: sweep .2s ease-in-out;
 }
+
 @keyframes sweep {
     0%    {opacity: 0;}
     100%  {opacity: 1;}
 }
-.mobile-content ul{ 
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    font-size: 16px;
-    font-weight: 300;
-    color:#ffffffb9;
-}
-.mobile-content ul li{
-    padding: 10px;
-}
-.mobile-content ul li:hover{
-    color:#ffffff;
-    cursor: pointer;
-    transition: .3s;
-}
-.side-menu{    
-    min-width: 15%;
-    position: absolute;  
-    background: rgba(3, 1, 72, 0.732);
-    backdrop-filter: blur(10px);
-    border-radius: 20px 0px 0px 20px;
-    padding: 20px;
-}
-@media all and (max-width: 768px) {
+
+
+@media all and (max-width: 800px) {
     .mobile-content{
+        margin-top:0;
+        position: relative;
         display: flex;
+        justify-content: flex-end;
+        animation: sweep .2s ease-in-out;
     }
+
+    @keyframes sweep {
+        0%    {opacity: 0;}
+        100%  {opacity: 1;}
+    }
+
     .mobile-navigation{
         display: flex;
         align-items: center;

@@ -12,7 +12,7 @@ const QrCode = () => {
         <defs>
         <rect id="block" width="15"  height="15" fillOpacity="1"/>
         </defs>
-        <rect x="0" y="0" width="500" height="500" fill="#ffffff" fillOpacity="0"/>
+        <rect x="0" y="0" width="500" height="500" fillOpacity="0"/>
         <use x="2" y="2" xlinkHref="#block"/><use x="17" y="2" xlinkHref="#block"/>
         <use x="32" y="2" xlinkHref="#block"/><use x="47" y="2" xlinkHref="#block"/>
         <use x="62" y="2" xlinkHref="#block"/><use x="77" y="2" xlinkHref="#block"/>

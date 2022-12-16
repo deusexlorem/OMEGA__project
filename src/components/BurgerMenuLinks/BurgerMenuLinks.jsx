@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
+import './BurgerMenuLinks.css'
  
 const BurgerMenuLinks = (props) => {
 
@@ -18,9 +19,9 @@ const BurgerMenuLinks = (props) => {
         <div className="mobile-content">
             <div className="side-menu">
                 <ul>
-                    <li onClick = {() => navigateAndClose('/explore')}>Explore</li>
-                    <li onClick = {() => navigateAndClose('/create')}>Create</li>
-                    <li onClick = {() => navigateAndClose('/connectWallet')}>Connect wallet</li>
+                    <li onClick = {() => navigateAndClose('/explore')}>Тренды</li>
+                    <li onClick = {() => navigateAndClose('/create')}>Фильмы</li>
+                    <li onClick = {() => navigateAndClose('/connectWallet')}>Сериалы</li>
                 </ul>
             </div>
         </div>
