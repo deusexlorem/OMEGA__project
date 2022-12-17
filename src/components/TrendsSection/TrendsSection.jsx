@@ -9,23 +9,20 @@ import SectionItem from "../SectionItem/SectionItem";
 import NextArrow from "../../icons/nextArrow";
 import PrevArrow from "../../icons/prevArrow";
 
+export let trends = [];
+
+const query = axios.get('https://api.themoviedb.org/3/trending/all/week?api_key=278614fd29fc7dd097dff30467b15133&language=ru-Rus')
+    .then((response) => {
+        response.data.results.map((trend) =>{
+            if(!trend.poster_path){
+                response.data.results.splice(response.data.results.indexOf(trend), 1)
+            } else {
+                trends.push(trend)
+            }
+        })
+    })
 
 const TrendsSection = ( ) => {
-
-    const [trends, setTrends ] = useState([]);
-    
-    useEffect(() => {
-
-    axios.get('https://api.themoviedb.org/3/trending/all/week?api_key=278614fd29fc7dd097dff30467b15133&language=ru-Rus')
-        .then((response) => {
-            setTrends(response.data.results);    
-        })
-    }, [])
-    
-    trends.map((trend ) => {
-        const finalPath = `https://image.tmdb.org/t/p/w500${trend.poster_path}`;
-        trend.poster_path = finalPath;
-    })
      
     const settings = {
         dots: false,
@@ -44,7 +41,7 @@ const TrendsSection = ( ) => {
             <Slider {...settings}>
                 {trends.map((trend ) => 
                     <SectionItem
-                        poster_path = {trend.poster_path}
+                        poster_path = {`https://image.tmdb.org/t/p/w500${trend.poster_path}`}
                         key = {trend.id}
                     /> 
                 )}
@@ -55,3 +52,4 @@ const TrendsSection = ( ) => {
 }
 
 export default TrendsSection;
+
