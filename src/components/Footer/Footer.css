@@ -68,11 +68,15 @@
     flex-direction: column;
     gap: 20px;
     padding: 0;
+    
+}
+.footer__navigation ul li{
+    transition: .3s;
 }
 .footer__navigation ul li:hover{
     color:#ffffff;
     cursor: pointer;
-    transition: .3s;
+    
 }
 .footer__navigation ul li{
     list-style-type: none;

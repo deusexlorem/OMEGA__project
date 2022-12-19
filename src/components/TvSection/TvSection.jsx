@@ -11,7 +11,7 @@ const TvSection = () => {
 
     useEffect(() => {
 
-        axios.get('https://api.themoviedb.org/3/tv/airing_today?api_key=278614fd29fc7dd097dff30467b15133&language=ru-Rus&page=1')
+        axios.get('https://api.themoviedb.org/3/tv/popular?api_key=278614fd29fc7dd097dff30467b15133&language=ru-Rus&page=1')
             .then((response) => {
                 response.data.results.map((show) =>{
                     if(!show.poster_path){
@@ -44,6 +44,8 @@ const TvSection = () => {
                     <SectionItem
                         poster_path = {`https://image.tmdb.org/t/p/w500${show.poster_path}`}
                         key = {show.id}
+                        id = {show.id}
+                        contentType = {'tv'}
                     />
 
                 )}

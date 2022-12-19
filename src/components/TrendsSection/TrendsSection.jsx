@@ -9,6 +9,8 @@ import SectionItem from "../SectionItem/SectionItem";
 import NextArrow from "../../icons/nextArrow";
 import PrevArrow from "../../icons/prevArrow";
 
+
+
 export let trends = [];
 
 const query = axios.get('https://api.themoviedb.org/3/trending/all/week?api_key=278614fd29fc7dd097dff30467b15133&language=ru-Rus')
@@ -23,6 +25,7 @@ const query = axios.get('https://api.themoviedb.org/3/trending/all/week?api_key=
     })
 
 const TrendsSection = ( ) => {
+    
      
     const settings = {
         dots: false,
@@ -36,15 +39,19 @@ const TrendsSection = ( ) => {
       
     return (
 
-        <div className="daily-offer">
+        <div className="trends__container">
             <h1>Сейчас в тренде</h1>
             <Slider {...settings}>
+            
                 {trends.map((trend ) => 
                     <SectionItem
                         poster_path = {`https://image.tmdb.org/t/p/w500${trend.poster_path}`}
                         key = {trend.id}
+                        id = {trend.id}
+                        contentType = {trend.media_type}
                     /> 
                 )}
+            
             </Slider>
         </div>
 

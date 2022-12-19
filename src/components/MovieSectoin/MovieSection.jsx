@@ -34,8 +34,6 @@ const MovieSection = () => {
         noRepeat()
 
     const moviesShort = movies.slice(0, 10)
-
-    console.log(moviesShort)
     
     return (
         <div className="movie_section__container">
@@ -46,6 +44,8 @@ const MovieSection = () => {
                     <SectionItem
                         poster_path = {`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                         key = {movie.id}
+                        id = {movie.id}
+                        contentType = {'movie'}
                     />
 
                 )}
