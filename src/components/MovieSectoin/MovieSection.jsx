@@ -3,7 +3,7 @@ import './MovieSection.css';
 import { useState, useEffect} from "react";
 import axios from "axios";
 import SectionItem from "../SectionItem/SectionItem";
-import { trends } from "../TrendsSection/TrendsSection";
+import GetTrends from "../GetData/GetTrends";
 
 const MovieSection = () => {
 
@@ -11,7 +11,7 @@ const MovieSection = () => {
     
     useEffect(() => {
 
-        axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key=278614fd29fc7dd097dff30467b15133&language=ru-Rus&page=1')
+        axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=278614fd29fc7dd097dff30467b15133&language=ru-Rus&page=1')
             .then((response) => {
                 response.data.results.map((movie) =>{
                     if(!movie.poster_path ){
@@ -23,7 +23,7 @@ const MovieSection = () => {
         }, [])
 
         const noRepeat = () =>{
-            trends.map((trend) =>{
+            GetTrends().map((trend) =>{
                 movies.map((movie) =>{
                     if(trend.id == movie.id){
                         movies.splice(movies.indexOf(movie), 1)
