@@ -9,7 +9,9 @@
     100% {opacity: 1;}
 }
 #omega-logo{
-    width: 60px;
+    margin-top: 15px;
+    margin-bottom: 12px;
+    width:45px;
 }
 .logo{
     fill: rgb(243, 55, 55);

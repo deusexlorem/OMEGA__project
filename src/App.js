@@ -1,33 +1,30 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer'
-import { Routes, Route} from 'react-router-dom';
+import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} from 'react-router-dom';
 import Main from './components/pages/Main';
 import Explore from './components/pages/Explore';
 import Create from './components/pages/Create';
 import ConnectWallet from './components/pages/ConnectWallet';
-import ItemPage from './components/ItemPage/ItemPage';
+import {ItemPage, ItemLoader} from './components/ItemPage/ItemPage';
+import Layout from './components/Layout/Layout';
 
 
 function App() {
   
+  const router = createBrowserRouter(createRoutesFromElements(
+        <Route path = '/' element = {<Layout/>}>
+          <Route index element = {<Main/>} />
+          <Route path = ':contentType/:id' element = {<ItemPage/>} loader = {ItemLoader}/>
+          <Route path = 'explore' element = {<Explore/>} />
+          <Route path = 'create' element = {<Create/>} />
+          <Route path = 'connectWallet' element = {<ConnectWallet/>} />
+        </Route>
+  ))
+
   return (
     <div>
-      <Header/>
+      
+    <RouterProvider router={router}/>
 
-      <Routes>
-        <Route path = '/' element = {<Main/>} />
-
-        <Route path = '/:contentType/:id' element = {<ItemPage/>} />
-
-        <Route path = '/explore' element = {<Explore/>} />
-
-        <Route path = '/create' element = {<Create/>} />
-
-        <Route path = '/connectWallet' element = {<ConnectWallet/>} />
-      </Routes>
-
-      <Footer/>
    </div>
   )
 }

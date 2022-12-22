@@ -1,0 +1,27 @@
+.crew__container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.crew__item{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 10px;
+    transition: all .3s;
+    text-align: center;
+}
+.crew__item img{
+    box-shadow: 0px 0px 7px #3a165b9f;
+    max-width: 108.8px;
+    border-radius: 20px;
+}
+#crew__text{
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+.crew__item:hover{
+    transform: scale(1.02);
+}

@@ -1,5 +1,7 @@
 import React from "react";
 import AddButton from "../../icons/AddButton";
+import CrewSlider from "../CrewSlider/CrewSlider";
+import NonSlider from "../CrewSlider/NonSlider";
 
 
 const MovieItem = (props) => {
@@ -29,7 +31,6 @@ const MovieItem = (props) => {
                             <button className="watch__button">Смотреть трейлер</button>
                             <AddButton/>
                         </div>
-                        {/* <p>Режиссер: <span className="genre__span">{props.crew.map((person)=>{if(person.job === "Director"){return person.name}})}</span></p> */}
                     </div>
                 </div>
                 <div className="item__data bottom__part">
@@ -39,6 +40,15 @@ const MovieItem = (props) => {
                 <div className="item__data bottom__part">
                     <h1>Жанр</h1>
                     <p>{array.map((item) => {return <span className="genre__span" key = {item}>{item.toLowerCase()}</span>})}</p>
+                </div>
+                <div className = "item__data bottom__part slider">
+                    <h1>Актеры и съемочная группа</h1>
+                    {props.crew.length < 5 ? 
+                    <div className="crew__section">
+                        <NonSlider crew = {props.crew}/>
+                    </div>
+                    : 
+                    <CrewSlider crew = {props.crew}/>}
                 </div>
             </div>
         </div>

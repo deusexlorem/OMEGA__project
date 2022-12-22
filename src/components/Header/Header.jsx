@@ -1,10 +1,10 @@
 import React from "react";
 import {useState} from "react";
 import BurgerMenu from "../../icons/burgerMenu";
-import Logo from "../../icons/logo";
 import './Header.css'
 import BurgerMenuLinks from "../BurgerMenuLinks/BurgerMenuLinks";
 import { useNavigate } from 'react-router-dom';
+import LogoNew from "../../icons/logoNew";
 
 const Header = () => {
 
@@ -22,7 +22,7 @@ const Header = () => {
     <div className="header__container">
         <div className="header">
             <div className="logo" onClick = {() => navigate('/')}>
-                <Logo/>
+                <LogoNew/>
                 <p>OMEGA</p>
                 <p id = 'mobile__logo'>O</p>
             </div>

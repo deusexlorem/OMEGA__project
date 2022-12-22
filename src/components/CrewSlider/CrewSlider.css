@@ -1,0 +1,23 @@
+.slider{
+    width: 50%;
+}
+.slider__item{
+    max-width: 80%;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 10px;
+    transition: all .3s;
+    text-align: center;
+}
+.slider__item img{
+    box-shadow: 0px 0px 7px #3a165b9f;
+    width: 100%;
+    border-radius: 20px;
+}
+#slider__text{
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+.slider__item:hover{
+    transform: scale(1.02);
+}
