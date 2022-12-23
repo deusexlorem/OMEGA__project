@@ -4,8 +4,9 @@ import { useState, useEffect} from "react";
 import axios from "axios";
 import SectionItem from "../SectionItem/SectionItem";
 import GetTrends from "../GetData/GetTrends";
+import AdaptArray from "../AdaptArray/AdaptArray";
 
-const TvSection = () => {
+const TvSection = (props) => {
     
     const [tv, setTv] = useState([ ]);
 
@@ -34,13 +35,13 @@ const TvSection = () => {
         }
         noRepeat()
 
-    const tvShort = tv.slice(0, 10)
+    // const tvShort = tv.slice(0, 10)
     
     return (
         <div className="tv_section__container">
             <h1>Сериалы</h1>
             <div className="tv_section__content">
-                {tvShort.map((show) => 
+                {AdaptArray(tv, props.width).map((show) => 
                     <SectionItem
                         poster_path = {`https://image.tmdb.org/t/p/w500${show.poster_path}`}
                         key = {show.id}

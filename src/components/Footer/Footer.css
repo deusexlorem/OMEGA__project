@@ -113,3 +113,10 @@
     }
     
 }
+@media all and (max-width: 321px) {
+    
+    .footer__navigation ul{
+        font-size: 13px;
+    }
+    
+}

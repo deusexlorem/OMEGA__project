@@ -37,13 +37,15 @@ const ItemLoader = async ({params}) => {
 
 const ItemPage = () => {
 
-    useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'auto'})
-      })
+    
 
     const {content, crew, id} = useLoaderData()
     
     const {contentType} = useParams()
+
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'auto'})
+      }, [content])
 
     return(
         <div>

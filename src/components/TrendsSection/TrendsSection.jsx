@@ -18,7 +18,34 @@ const TrendsSection = ( ) => {
         slidesToShow: 5,
         slidesToScroll: 1,
         nextArrow: <NextArrow/>,
-        prevArrow: <PrevArrow/>
+        prevArrow: <PrevArrow/>,
+        responsive: [
+            {
+              breakpoint: 800,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                swipeToSlide: true,
+                
+              }
+            },
+            {
+                breakpoint: 540,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  swipeToSlide: true,
+                }
+            },
+            {
+                breakpoint: 320,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  swipeToSlide: true,
+                }
+            },
+        ]
       };
       
     return (

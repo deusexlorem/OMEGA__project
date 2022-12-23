@@ -4,8 +4,10 @@ import { useState, useEffect} from "react";
 import axios from "axios";
 import SectionItem from "../SectionItem/SectionItem";
 import GetTrends from "../GetData/GetTrends";
+import AdaptArray from "../AdaptArray/AdaptArray";
 
-const MovieSection = () => {
+
+const MovieSection = (props) => {
 
     const [movies, setMovies] = useState([ ]);
     
@@ -32,26 +34,26 @@ const MovieSection = () => {
             })
         }
         noRepeat()
+     
 
-    const moviesShort = movies.slice(0, 10)
-    
     return (
+        
         <div className="movie_section__container">
             <h1>Фильмы</h1>
             <div className="movie_section__content">
-                {moviesShort.map((movie) => 
-                    
-                    <SectionItem
-                        poster_path = {`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                        key = {movie.id}
-                        id = {movie.id}
-                        contentType = {'movie'}
-                    />
-
-                )}
+               
+                    {AdaptArray(movies, props.width).map((movie) => 
+                        <SectionItem
+                            poster_path = {`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                            key = {movie.id}
+                            id = {movie.id}
+                            contentType = {'movie'}
+                        />
+                    )}
+               
             </div>
         </div>
     )
 }
 
-export default MovieSection;
+export default MovieSection; 

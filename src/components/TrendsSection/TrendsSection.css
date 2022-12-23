@@ -25,5 +25,28 @@
 }
 .slick-arrow:hover{
     fill: #ffffffb8;
-    
+}
+@media all and (max-width: 800px){
+    .trends__container {
+        padding:  10px 20px 20px 20px;
+    }
+    .trends__container h1{
+        font-size: 40px;
+        
+    }
+    .slick-arrow{
+        display: none !important;
+    }
+}
+@media all and (max-width: 541px){
+
+    .trends__container h1{
+        font-size: 30px;
+    }
+} 
+@media all and (max-width: 426px){
+
+    .trends__container h1{
+        font-size: 20px;
+    }
 }

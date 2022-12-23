@@ -25,3 +25,37 @@
     display: grid;
     grid-template-columns: repeat(5, auto);
 }
+@media all and (max-width: 800px){
+    .tv_section__container{
+        padding:  10px 20px 20px 20px;
+    }
+    .tv_section__content{
+        grid-template-columns: repeat(4, auto);
+    }
+    .tv_section__container h1{
+        font-size: 40px;
+    }
+}
+@media all and (max-width: 541px){
+    
+    .tv_section__content{
+        grid-template-columns: repeat(3, auto);
+        
+    }
+    .tv_section__container h1{
+        font-size: 30px;
+    }
+}
+@media all and (max-width: 426px){
+
+    .tv_section__container h1{
+        font-size: 20px;
+    }
+}
+@media all and (max-width: 321px){
+
+    .tv_section__content{
+        grid-template-columns: repeat(2, auto);
+        
+    }
+}

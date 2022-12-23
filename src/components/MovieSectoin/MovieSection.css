@@ -25,3 +25,39 @@
     display: grid;
     grid-template-columns: repeat(5, auto);
 }
+@media all and (max-width: 800px){
+    .movie_section__container{
+        padding:  10px 20px 20px 20px;
+    }
+    .movie_section__content{
+        grid-template-columns: repeat(4, auto);
+        
+    }
+    .movie_section__container h1{
+        font-size: 40px;
+    }
+}
+
+@media all and (max-width: 541px){
+    
+    .movie_section__content{
+        grid-template-columns: repeat(3, auto);
+        
+    }
+    .movie_section__container h1{
+        font-size: 30px;
+    }
+} 
+@media all and (max-width: 426px){
+
+    .movie_section__container h1{
+        font-size: 20px;
+    }
+}
+@media all and (max-width: 321px){
+
+    .movie_section__content{
+        grid-template-columns: repeat(2, auto);
+        
+    }
+}

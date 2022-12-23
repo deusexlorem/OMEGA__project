@@ -7,7 +7,7 @@
     box-shadow: 0px 10px 40px rgba(12, 12, 12, 0.1);
     transition: .2s;
     animation: appear2 .7s ease-in-out;
-    
+    background-position: center;
 }
 @keyframes appear2 {
     0%    {opacity: 0;}
@@ -28,6 +28,7 @@
     width: 20vw;
     border-radius: 20px;
     box-shadow: 0px 10px 40px rgba(12, 12, 12, 0.1);
+    transition: .2s;
 }
 .item__data{
     text-shadow: 0px 0px 1px#ffffffb9;
@@ -119,4 +120,29 @@
 }
 .crew__section{
     width: 50%;
+}
+@media all and (max-width: 1000px){
+    /* .page__container{
+        
+    } */
+    .item__image img{
+        width: 30vw;
+    }
+    .item__data h1{
+        font-size: 20px;
+        font-weight: 500;
+        
+    }
+    .item__data span{
+        font-weight: 300;
+        color:#ffffffb9;
+    }
+    .title__span{
+        font-size: 20px;
+    }
+    
+    .genre__span{
+        font-size: 14px;
+        
+    }
 }
